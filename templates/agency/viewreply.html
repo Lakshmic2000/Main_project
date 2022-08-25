@@ -1,0 +1,19 @@
+{% extends 'indexagency.html' %}
+{% block body %}
+<body>
+<table width="200" border="0" class="table">
+  <tr>
+    <th scope="col">DATE</th>
+    <th scope="col">COMPLAINT</th>
+    <th scope="col">REPLY</th>
+  </tr>
+  {%for i in val%}
+  <tr>
+    <td>&nbsp;{{i[2]}}</td>
+    <td>&nbsp;{{i[3]}}</td>
+    <td>&nbsp;{{i[4]}}</td>
+  </tr>
+  {%endfor%}
+</table>
+</body>
+{%endblock%}

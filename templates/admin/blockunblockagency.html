@@ -1,0 +1,34 @@
+{% extends 'indexadmin.html' %}
+{% block body %}
+
+<body>
+
+<table width="200" border="0" class="table">
+  <tr>
+    <th scope="col">NAME</th>
+    <th scope="col">PLACE</th>
+    <th scope="col">POST</th>
+    <th scope="col">PIN</th>
+    <th scope="col">EMAIL</th>
+    <th scope="col">PHONE</th>
+    <th scope="col">&nbsp;</th>
+  </tr>
+  <tr>
+      {%for i in val%}
+
+      <td>&nbsp;{{i[2]}}</td>
+    <td>&nbsp;{{i[3]}}</td>
+    <td>{{i[4]}}&nbsp;</td>
+    <td>&nbsp;{{i[5]}}</td>
+    <td>&nbsp;{{i[7]}}</td>
+    <td>&nbsp;{{i[6]}}</td>
+    <td><p>{%if i[8]=='agency'%}<a href="/blockagencys?id={{i[1]}}">BLOCK</a>{%endif%}</p>
+    <p>{%if i[8]=='block'%}<a href="/unblockagency?id={{i[1]}}">UNBLOCK</a>{%endif%}</p>
+
+    <p>{%if i[8]=='reject'%}<a href="/unblockagency?id={{i[1]}}">UNBLOCK</a>{%endif%}</p></td>
+  </tr>
+    {%endfor%}
+
+</table>
+</body>
+{%endblock%}

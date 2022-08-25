@@ -1,0 +1,42 @@
+{% extends 'indexofficer.html' %}
+{% block body %}
+
+<body>
+<form id="form1" name="form1" method="post" action="/pkgrequests#about">
+
+<table width="200" border="0" class="table">
+
+    <tr>
+    <th scope="col">TYPE</th>
+    <th scope="col"><label for="select"></label>
+      <select name="select" id="select">
+                <option value="school" {%if type=="school"%} selected{%endif%}>SCHOOL</option>
+
+        <option value="college" {%if type=="college"%} selected{%endif%} >COLLEGE</option>
+        <option value="university" {%if type=="university"%} selected{%endif%} >UNIVERSITY</option>
+        <option value="other" {%if type=="other"%} selected{%endif%}>OTHER</option>
+    </select></th>
+    <th scope="col"><input type="submit" name="button2" id="button2" value="Submit"></th>
+  </tr>
+  <tr>
+    <th scope="col">DATE</th>
+    <th scope="col">AGENCY</th>
+    <th scope="col">PACKAGE</th>
+    <th scope="col">DESCRIPTION</th>
+    <th scope="col">&nbsp;</th>
+  </tr>
+  <tr>
+    {%for i in val%}
+    <td>{{i[9]}}</td>
+    <td>{{i[0]}}&nbsp;</td>
+    <td>&nbsp;{{i[3]}} </td>
+    <td>&nbsp;{{i[4]}}</td>
+    <td><p><a href="/acceptreq?id={{i[6]}}">ACCEPT</a></p>
+    <p><a href="/rejectreq?id={{i[6]}}">REJECT</a></p></td>
+  </tr>
+  {%endfor%}
+</table>
+</form>
+</body>
+
+{%endblock%}

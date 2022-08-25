@@ -1,0 +1,60 @@
+
+{% extends 'index.html' %}
+{% block body %}
+<body>
+<h1>AGENCY REGISTRATION</h1>
+<form id="form1" name="form1" method="post" action="/agencyreg">
+  <table width="548" border="0" class="table">
+    <tr>
+      <th width="289" scope="row">AGENCY NAME</th>
+      <td width="243">&nbsp;<input type="text" name="textfield01" id="textfield1" required pattern="[A-Z a-z.]{3,25}" /></td>
+    </tr>
+
+
+
+    <tr>
+      <th scope="row">PLACE</th>
+      <td><label for="textfield2"></label>
+      <input type="text" name="textfield2" id="textfield2" required pattern="[A-Z a-z.]{3,25}" /></td>
+    </tr>
+    <tr>
+      <th scope="row">POST</th>
+      <td><label for="textfield3"></label>
+      <input type="text" name="textfield3" id="textfield3" required pattern="[A-Z a-z.]{3,25}" /></td>
+    </tr>
+    <tr>
+      <th scope="row">PIN</th>
+      <td><label for="textfield4"></label>
+      <input type="text" name="textfield4" id="textfield4" required pattern="[0-9]{6}" /></td>
+    </tr>
+    <tr>
+      <th scope="row">PHONE</th>
+      <td><label for="textfield5"></label>
+      <input type="text" name="textfield5" id="textfield5" required pattern="[6789][0-9]{9}" /></td>
+    </tr>
+    <tr>
+      <th scope="row">EMAIL</th>
+      <td><label for="textfield6"></label>
+      <input type="text" name="textfield6" id="textfield6" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" /></td>
+    </tr>
+
+
+
+
+     <tr>
+      <th scope="row">USERNAME</th>
+      <td><label for="textfield6"></label>
+      <input type="text" name="textfield8" id="textfield6" required /></td>
+    </tr>
+    <tr>
+      <th scope="row">PASSWORD</th>
+      <td><label for="textfield7"></label>
+      <input type="password" name="textfield9" id="textfield7" required /></td>
+    </tr>
+    <tr>
+      <th colspan="2" scope="row"><input type="submit" name="button" id="button" value="Submit" /></th>
+    </tr>
+  </table>
+</form>
+</body>
+{%endblock%}

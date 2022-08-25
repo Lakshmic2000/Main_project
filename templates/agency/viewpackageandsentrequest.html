@@ -1,0 +1,38 @@
+{% extends 'indexagency.html' %}
+{% block body %}
+<body>
+<form id="form1" name="form1" method="post" action="/aviewpkgs#about">
+
+<table width="481" border="0" class="table">
+
+    <tr>
+    <th scope="col">TYPE</th>
+    <th scope="col"><label for="select"></label>
+      <select name="select" id="select">
+                <option value="school" {%if type=="school"%} selected{%endif%}>SCHOOL</option>
+
+        <option value="college" {%if type=="college"%} selected{%endif%} >COLLEGE</option>
+        <option value="university" {%if type=="university"%} selected{%endif%} >UNIVERSITY</option>
+        <option value="other" {%if type=="other"%} selected{%endif%}>OTHER</option>
+    </select></th>
+    <th scope="col"><input type="submit" name="button2" id="button2" value="Submit">                  note: Full&nbsp;amount will be
+                                                                                                      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;in a single term or annually</th>
+  </tr>
+
+  <tr>
+    <th width="125" scope="col">PACKAGE NAME</th>
+    <th width="164" scope="col">DESCRIPTION</th>
+    <th width="170" scope="col">&nbsp;</th>
+  </tr>
+        {%for i in val%}
+
+  <tr>
+    <td>{{i[2]}}&nbsp;</td>
+    <td>{{i[3]}}&nbsp;</td>
+    <td><a href="/sentreqst?id={{i[0]}}">SENT REQUEST</a></td>
+  </tr>
+  {%endfor%}
+</table>
+</form>
+</body>
+{%endblock%}

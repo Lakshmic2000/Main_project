@@ -1,0 +1,36 @@
+{% extends 'indexadmin.html' %}
+{% block body %}
+
+<body>
+<table width="200" border="0"class="table">
+<form id="form1" name="form1" method="post" action="/searchpakge#about">
+<tr></tr>
+<tr>
+  <th scope="row">OFFICER NAME</th>
+  <th>
+    <label for="select"></label>
+    <select name="select" id="select">
+        {%for i in val%}
+        <option value="{{i[1]}}" {%if i[1]==ofid%} selected {%endif%}>{{i[2]}} {{i[3]}}</option>
+        {%endfor%}
+    </select>
+ </th>
+  <th><input type="submit" name="button" id="button" value="SEARCH" /></th>
+</tr>
+<tr>
+  <th scope="row">PACKAGE</th>
+  <th>DESCRIPTION</th>
+  <th>&nbsp;</th>
+</tr>
+    {%for i in val1%}
+<tr>
+  <td scope="row">{{i[2]}}&nbsp;</td>
+  <td>&nbsp;{{i[3]}}</td>
+  <td><p><a href="/approvepkg?id={{i[0]}}">APPROVE</a></p>
+    <p><a href="/rejectpkge?id={{i[0]}}">REJECT</a></p></td>
+</tr>
+    {%endfor%}
+ </form>
+</table>
+</body>
+{%endblock%}

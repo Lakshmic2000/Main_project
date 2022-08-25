@@ -1,0 +1,77 @@
+{% extends 'indexadmin.html' %}
+{% block body %}
+<body>
+<form id="form1" name="form1" method="post" action="/officerupdate">
+  <table width="548" border="0" class="table">
+
+    <tr>
+      <th width="289" scope="row">FIRST NAME</th>
+      <td width="243">&nbsp;<input type="text" name="textfield01" id="textfield1" value="{{val[2]}}" required pattern="[A-Z a-z.]{3,25}" /></td>
+    </tr>
+    <tr>
+      <th scope="row">LAST NAME</th>
+      <td>&nbsp;<input type="text" name="textfield02" id="textfield11" value="{{val[3]}}" required pattern="[A-Z a-z.]{1,25}" /></td>
+    </tr>
+    <tr>
+      <th scope="row">GENDER</th>
+      <td><input type="radio" name="radio" id="radio" value="male" {%if val[5]=="male"%} checked {%endif%} />
+      <label for="radio">MALE
+        <input type="radio" name="radio" id="radio2" value="female" {%if val[5]=="female"%} checked {%endif%} />
+      FEMALE</label></td>
+    </tr>
+    <tr>
+      <th scope="row">DOB</th>
+      <td><label for="textfield"></label>
+      <input type="date" name="textfield" id="textfield" value="{{val[6]}}" required /></td>
+    </tr>
+    <tr>
+      <th scope="row">PLACE</th>
+      <td><label for="textfield2"></label>
+      <input type="text" name="textfield2" id="textfield2" value="{{val[7]}}"  required pattern="[A-Z a-z.]{3,25}" /></td>
+    </tr>
+    <tr>
+      <th scope="row">POST</th>
+      <td><label for="textfield3"></label>
+      <input type="text" name="textfield3" id="textfield3"value="{{val[8]}}"  required pattern="[A-Z a-z.]{3,25}" /></td>
+    </tr>
+    <tr>
+      <th scope="row">PIN</th>
+      <td><label for="textfield4"></label>
+      <input type="text" name="textfield4" id="textfield4" value="{{val[9]}}" required pattern="[0-9]{6}"  /></td>
+    </tr>
+    <tr>
+      <th scope="row">PHONE</th>
+      <td><label for="textfield5"></label>
+      <input type="text" name="textfield5" id="textfield5" value="{{val[10]}}" required pattern="[6789][0-9]{9}"/></td>
+    </tr>
+    <tr>
+      <th scope="row">EMAIL</th>
+      <td><label for="textfield6"></label>
+      <input type="text" name="textfield6" id="textfield6" value="{{val[11]}}" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" /></td>
+    </tr>
+    <tr>
+      <th scope="row">QUALIFICATION</th>
+      <td><label for="textfield7"></label>
+      <input type="text" name="textfield7" id="textfield7" value="{{val[4]}}" required/></td>
+    </tr>
+
+  <tr>
+      <th width="289" scope="row">OFFICE NAME</th>
+      <td width="243">&nbsp;<input type="text" name="textfields" id="textfield1" value="{{val[14]}}" required pattern="[A-Z a-z.]{3,25}" /></td>
+    </tr>
+ <tr>
+      <th width="289" scope="row">OFFICE ADDRESS</th>
+   <td width="243">&nbsp;<textarea name="textfields1" required >{{val[17]}}</textarea></td>
+    </tr>
+ <tr>
+      <th width="289" scope="row">DESIGNATION</th>
+      <td width="243">&nbsp;<input type="text" name="textfields2" id="textfiel" required pattern="[A-Z a-z.]{3,25}"  value="{{val[16]}}"  /></td>
+    </tr>
+
+
+      <th colspan="2" scope="row"><input type="submit" name="button" id="button" value="UPDATE" /></th>
+    </tr>
+  </table>
+</form>
+</body>
+{%endblock%}

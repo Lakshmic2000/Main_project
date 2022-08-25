@@ -1,0 +1,42 @@
+{% extends 'indexadmin.html' %}
+{% block body %}
+
+<body>
+<form id="form1" name="form1" method="post" action="/history#about">
+  <table width="200" border="1" class="table">
+    
+    
+    <tr>
+      <th colspan="4" scope="col">YEAR</th>
+      <th colspan="4" scope="col"><select name="select">
+          <option>2020</option>
+          <option>2021</option>
+          <option>2022</option>
+          <option>2023</option>
+          <option>2024</option>
+          <option>2025</option>
+          <option>2026</option>
+          <option>2027</option>
+          <option>2028</option>
+          <option>2029</option>
+        </select></th>
+      <th colspan="2" scope="col"><input type="submit" value="SEARCH"></th>
+    </tr>
+    </table>
+    <table class="table">
+    <tr align="center">
+      <th scope="col"> AGENCY NAME</th>
+      <th scope="col">AMOUNT</th>
+     
+    </tr>
+    {%for i in val%}
+    <tr align="center">
+      <td>{{i[0]}} </td>
+            <td>{{i[4]}}</td>
+    </tr>
+    {%endfor%}
+  </table>
+  <p align="center">&nbsp;</p>
+</form>
+</body>
+{%endblock%}

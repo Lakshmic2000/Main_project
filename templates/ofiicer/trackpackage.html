@@ -1,0 +1,26 @@
+{% extends 'indexofficer.html' %}
+{% block body %}
+
+<body>
+<table width="200" border="0" class="table">
+<form id="form1" name="form1" method="post" action="/searchpakges#about">
+<tr></tr>
+
+
+<tr>
+  <th scope="row">PACKAGE</th>
+  <th>DESCRIPTION</th>
+  <th>&nbsp;</th>
+</tr>
+    {%for i in val1%}
+<tr>
+  <td scope="row">{{i[2]}}&nbsp;</td>
+  <td>&nbsp;{{i[3]}}</td>
+  <td><p><a href="/viewmore1?id={{i[0]}}#about">VIEW MORE</a></p>
+    </td>
+</tr>
+    {%endfor%}
+ </form>
+</table>
+</body>
+{%endblock%}

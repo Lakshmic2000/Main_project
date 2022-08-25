@@ -1,0 +1,39 @@
+
+
+{% extends 'index.html' %}
+{% block body %}
+<body>
+<form id="form1" name="form1" method="post" action="/login">
+  <p>&nbsp;</p>
+  <div align="center">LOGIN
+  </div>
+  <table width="200" border="0" class="table" bgcolor="blue">
+    <tr>
+      <td>user name </td>
+      <td><label>
+        <input type="text" name="uname" required/>
+      </label></td>
+    </tr>
+    <tr>
+      <td>password</td>
+      <td><label>
+        <input type="password" name="password" required />
+      </label></td>
+    </tr>
+    <tr>
+      <td colspan="2"><label>
+        <div align="center">
+          <input type="submit" name="Submit" value="login" />
+            <a href="/agency#about">AGENCY REGISTRATION</a>
+          <p></p>
+            <a href="/forgot#about">FORGOT PASSWORD</a>
+
+        </div>
+      </label></td>
+    </tr>
+  </table>
+</form>
+</body>
+
+
+{%endblock%}

@@ -1,0 +1,40 @@
+
+
+{% extends 'indexofficer.html' %}
+{% block body %}
+
+<body>
+<form id="form1" name="form1" method="post" action="/addpackages">
+  <table width="844" border="0" class="table">
+    <tr>
+      <th width="204"><input type="radio" name="radio" id="radio" value="school">
+        <label for="radio"></label>
+      SCHOOL</th>
+      <th width="276"><input type="radio" name="radio" id="radio" value="college">
+      <label for="radio2">COLLEGE</label></th>
+      <th width="194"><input type="radio" name="radio" id="radio3" value="university">
+      <label for="radio3">UNIVERSITY</label></th>
+      <th width="152"><input type="radio" name="radio" id="radio4" value="other">
+        OTHER</th>
+    </tr>
+    <tr>
+      <th scope="row">PACKAGE NAME</th>
+      <td colspan="3"><p>
+        <label for="textfield"></label>
+        <input type="text" name="textfield" id="textfield" required />
+      &nbsp;<!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; note:&nbsp;&nbsp;Amount with</p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Credit  Annually</p></td>--->
+    </tr>
+    <tr>
+      <th scope="row">DESCRIPTION</th>
+      <td colspan="3"><label for="textarea"></label>
+      <textarea name="textarea" id="textarea" cols="45" rows="5" required></textarea></td>
+    </tr>
+    <tr>
+      <th colspan="4" scope="row"><input type="submit" name="button" id="button" value="Submit" /></th>
+    </tr>
+  </table>
+</form>
+</body>
+{%endblock%}

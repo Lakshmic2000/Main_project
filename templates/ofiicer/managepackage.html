@@ -1,0 +1,44 @@
+{% extends 'indexofficer.html' %}
+{% block body %}
+
+<body>
+<form id="form1" name="form1" method="post" action="/searchpackage#about">
+
+<table width="200" border="0" class="table">
+  <tr>
+    <th scope="col">TYPE</th>
+    <th scope="col"><label for="select"></label>
+      <select name="select" id="select">
+                <option value="school">SCHOOL</option>
+
+        <option value="college">COLLEGE</option>
+        <option value="university" >UNIVERSITY</option>
+        <option value="other">OTHER</option>
+    </select></th>
+    <th scope="col"><input type="submit" name="button2" id="button2" value="Submit"></th>
+  </tr>
+  <tr>
+    <th scope="col">PACKAGE NAME</th>
+    <th scope="col">DESCRIPTION</th>
+    <th scope="col">&nbsp;</th>
+  </tr>
+      {%for i in val%}
+
+  <tr>
+    <td>{{i[2]}}&nbsp;</td>
+    <td>{{i[3]}}&nbsp;</td>
+    <td>
+    <p><a href="/dltpkg?id={{i[0]}}">DELETE</a></p></td>
+  </tr>
+  {%endfor%}
+</table>
+</form>
+<form id="form1" name="form1" method="post" action="/addpackage#about">
+  <div align="center">
+    <input type="submit" name="button" id="button" value="ADD NEW" />
+  </div>
+</form>
+<p>&nbsp;</p>
+</body>
+
+{%endblock%}

@@ -1,0 +1,20 @@
+{% extends 'indexagency.html' %}
+{% block body %}
+
+<body>
+<form id="form1" name="form1" method="post" action="amounts">
+  <table width="200" border="0" class="table">
+    <tr>
+      <th scope="col">AMOUNT</th>
+      <th scope="col"><label for="textarea"></label>
+      <input type="number" name="text" required></th>
+    </tr>
+    <tr>
+      <td colspan="2"><div align="center">
+        <input type="submit" name="button" id="button" value="SENT" />
+      </div></td>
+    </tr>
+  </table>
+</form>
+</body>
+{%endblock%}

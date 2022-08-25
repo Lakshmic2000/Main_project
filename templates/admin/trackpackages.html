@@ -1,0 +1,28 @@
+{% extends 'indexadmin.html' %}
+{% block body %}
+
+<body>
+<table width="200" border="0" class="table">
+<form id="form1" name="form1" method="post" action="/searchpakges#about">
+<tr></tr>
+
+
+<tr>
+  <th scope="row">AGENCY DETAILS</th>
+  <th>DATE(amount request date)</th>
+  <th>AMOUNT&nbsp;</th>
+    <TH>STATUS</TH>
+</tr>
+    {%for i in val%}
+<tr>
+  <td>{{i[0]}} {{i[1]}}</td>
+  <td>&nbsp;{{i[2]}}</td>
+  <td>{{i[3]}}</td>
+      <td>{{i[4]}}</td>
+
+</tr>
+    {%endfor%}
+ </form>
+</table>
+</body>
+{%endblock%}

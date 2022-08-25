@@ -1,0 +1,76 @@
+{% extends 'indexadmin.html' %}
+{% block body %}
+
+<body>
+<form id="form1" name="form1" method="post" action="/addstaff#about">
+  <table width="200" border="1" class="table">
+
+
+    <tr>
+      <th colspan="4" scope="col">DISTRICT</th>
+      <th colspan="4" scope="col"><select name="select">
+          <option>select</option>
+          <option>Malappuram</option>
+          <option>Thiruvananthapuram</option>
+          <option>Eranakulam</option>
+          <option>Thrissur</option>
+          <option>Kozhikode</option>
+          <option>Palakad</option>
+          <option>Kollam</option>
+          <option>kannur</option>
+          <option>Alappuzha</option>
+          <option>Kottayam</option>
+          <option>Kasaragod</option>
+          <option>Pathanamthitta</option>
+          <option>idukki</option>
+          <option>Wayanad</option>
+
+        </select></th>
+      <th colspan="2" scope="col"><input type="submit" value="SEARCH"name="button"></th>
+    </tr>
+    <tr>
+
+      <th scope="col">NAME</th>
+      <th scope="col">GENDER</th>
+      <th scope="col">DOB</th>
+      <th scope="col">PLACE</th>
+      <th scope="col">POST</th>
+      <th scope="col">PIN</th>
+      <th scope="col">PHONE</th>
+      <th scope="col">EMAIL</th>
+      <th scope="col">QUALIFICATION</th>
+                <th scope="col">OFFICE NAME</th>
+                        <th scope="col">OFFICE ADDRESS</th>
+                <th scope="col">DESIGNATION</th>
+
+
+      <th scope="col">&nbsp;</th>
+    </tr>
+    {%for i in val%}
+    <tr>
+
+      <td>{{i[2]}} {{i[3]}}</td>
+      <td>&nbsp;{{i[5]}}</td>
+      <td>&nbsp;{{i[6]}}</td>
+      <td>{{i[7]}}&nbsp;</td>
+      <td>&nbsp;{{i[8]}}</td>
+      <td>&nbsp;{{i[9]}}</td>
+      <td>{{i[10]}}&nbsp;</td>
+      <td>&nbsp;{{i[11]}}</td>
+      <td>&nbsp;{{i[4]}}</td>
+                    <td>{{i[14]}} </td>
+
+                    <td>{{i[17]}} </td>
+                    <td>{{i[16]}} </td>
+
+      <td><p><a href="editstaff?id={{i[1]}}#about">EDIT</a></p>
+      <p><a href="/deltestaff?id={{i[1]}}">DELETE</a></p></td>
+    </tr>
+    {%endfor%}
+  </table>
+  <p align="center">
+    <input type="submit" name="button" id="button" value="ADD NEW"  />
+  </p>
+</form>
+</body>
+{%endblock%}
